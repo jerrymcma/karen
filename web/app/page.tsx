@@ -65,7 +65,7 @@ export default function HomePage() {
         fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
       }}
     >
-      <h1 style={{ fontSize: 20, marginBottom: 8 }}>Karen — AI Therapy</h1>
+      <h1 style={{ fontSize: 20, marginBottom: 8, marginLeft: 12 }}>karen</h1>
       <div
         style={{
           border: "1px solid #ddd",
