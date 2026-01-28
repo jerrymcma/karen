@@ -12,7 +12,7 @@ export default function TermsPage() {
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 18, marginBottom: 12 }}>Important Disclaimer</h2>
         <p style={{ marginBottom: 12 }}>
-          <strong>Karen is an AI chat companion for informational and support purposes only.</strong> 
+          <strong>Karen is an AI chat companion for informational and support purposes only.</strong>{" "}
           Karen is not a licensed mental health professional, therapist, counselor, or healthcare provider.
         </p>
         <p style={{ marginBottom: 12 }}>
