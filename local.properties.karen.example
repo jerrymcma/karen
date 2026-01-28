@@ -1,0 +1,13 @@
+# Copy these lines into your local.properties (and keep your real values private).
+# Do NOT commit secrets to version control.
+#
+# Keep your existing sdk.dir line intact (e.g., sdk.dir=C:\\Android\\Sdk)
+# Then add the keys below with your real values.
+
+GROQ_API_KEY=sk_your_groq_key_here
+BRAVE_API_KEY=sk_your_brave_key_here
+
+# Sensible defaults for Phase 1 (can be changed anytime)
+GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_BASE_URL=https://api.groq.com/openai/v1
+BRAVE_GROUNDING_URL=https://api.brave.com/grounding/v1
