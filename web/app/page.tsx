@@ -65,7 +65,7 @@ export default function HomePage() {
         fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
       }}
     >
-      <h1 style={{ fontSize: 20, marginBottom: 8, marginLeft: 12 }}>karen</h1>
+      <h1 style={{ fontSize: 20, marginBottom: 8, marginLeft: 12 }}>Karen</h1>
       <div
         style={{
           border: "1px solid #ddd",
@@ -133,9 +133,17 @@ export default function HomePage() {
           </button>
         </div>
       </div>
-      <p style={{ color: "#6b7280", fontSize: 12, marginTop: 8 }}>
-        Phase 1 placeholder responses; Groq/Brave integration comes next.
-      </p>
+      <div style={{ 
+        display: "flex", 
+        gap: 16, 
+        justifyContent: "center", 
+        marginTop: 16, 
+        fontSize: 12, 
+        color: "#6b7280" 
+      }}>
+        <a href="/terms" style={{ textDecoration: "none", color: "#6b7280" }}>Terms</a>
+        <a href="/privacy" style={{ textDecoration: "none", color: "#6b7280" }}>Privacy</a>
+      </div>
     </main>
   );
 }
