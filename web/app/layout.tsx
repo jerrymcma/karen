@@ -31,6 +31,19 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/Karen_icon.png" />
         <link rel="apple-touch-icon" href="/Karen_icon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Karen",
+              "url": "https://chatkaren.com",
+              "description": "I'm here to listen. What's on your mind?",
+              "logo": "https://chatkaren.com/Karen_icon.png"
+            })
+          }}
+        />
       </head>
       <body style={{ margin: 0, padding: 0 }}>
         {children}
