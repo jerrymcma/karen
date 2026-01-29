@@ -158,8 +158,8 @@ export default function HomePage() {
           opacity: 0.7,
           transition: "opacity 0.2s ease"
         }} 
-        onMouseEnter={(e) => e.target.style.opacity = "1"}
-        onMouseLeave={(e) => e.target.style.opacity = "0.7"}>
+        onMouseEnter={(e) => (e.target as HTMLElement).style.opacity = "1"}
+        onMouseLeave={(e) => (e.target as HTMLElement).style.opacity = "0.7"}>
           ⓘ
         </a>
       </div>
