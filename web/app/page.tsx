@@ -66,6 +66,9 @@ export default function HomePage() {
         fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
         marginBottom: 0,
         paddingBottom: 0,
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100dvh",
       }}
     >
       <h1 style={{ fontSize: 20, marginBottom: 8, marginLeft: 12 }}>Karen</h1>
@@ -78,6 +81,7 @@ export default function HomePage() {
           display: "flex",
           flexDirection: "column",
           gap: 8,
+          flex: 1,
         }}
       >
         <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
