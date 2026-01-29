@@ -15,6 +15,7 @@ export default function HomePage() {
   ]);
   const [input, setInput] = useState("");
   const [sending, setSending] = useState(false);
+    const [showDropdown, setShowDropdown] = useState(false);
 
   async function sendMessage() {
     const trimmed = input.trim();
