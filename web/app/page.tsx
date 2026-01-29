@@ -64,6 +64,8 @@ export default function HomePage() {
         margin: "0 auto",
         padding: 16,
         fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
+        marginBottom: 0,
+        paddingBottom: 0,
       }}
     >
       <h1 style={{ fontSize: 20, marginBottom: 8, marginLeft: 12 }}>Karen</h1>
@@ -151,6 +153,7 @@ export default function HomePage() {
         display: "flex", 
         justifyContent: "center", 
         marginTop: 16,
+        marginBottom: 0,
         position: "relative"
       }}>
         <div style={{ position: "relative" }}>
@@ -165,7 +168,7 @@ export default function HomePage() {
               fontSize: 16,
               opacity: 0.7,
               transition: "opacity 0.2s ease",
-              padding: 4
+              padding: 0
             }}
             onMouseEnter={(e) => (e.target as HTMLElement).style.opacity = "1"}
             onMouseLeave={(e) => (e.target as HTMLElement).style.opacity = "0.7"}
