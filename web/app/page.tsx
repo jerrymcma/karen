@@ -150,19 +150,77 @@ export default function HomePage() {
       <div style={{ 
         display: "flex", 
         justifyContent: "center", 
-        marginTop: 16
+        marginTop: 16,
+        position: "relative"
       }}>
-        <a href="/info" style={{ 
-          textDecoration: "none", 
-          color: "#d1d5db",
-          fontSize: 16,
-          opacity: 0.7,
-          transition: "opacity 0.2s ease"
-        }} 
-        onMouseEnter={(e) => (e.target as HTMLElement).style.opacity = "1"}
-        onMouseLeave={(e) => (e.target as HTMLElement).style.opacity = "0.7"}>
-          ⓘ
-        </a>
+        <div style={{ position: "relative" }}>
+          <button
+            onClick={() => setShowDropdown(!showDropdown)}
+            onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
+            style={{ 
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              textDecoration: "none", 
+              color: "#6b7280",
+              fontSize: 16,
+              opacity: 0.7,
+              transition: "opacity 0.2s ease",
+              padding: 4
+            }}
+            onMouseEnter={(e) => (e.target as HTMLElement).style.opacity = "1"}
+            onMouseLeave={(e) => (e.target as HTMLElement).style.opacity = "0.7"}
+          >
+            ⓘ
+          </button>
+          {showDropdown && (
+            <div style={{
+              position: "absolute",
+              bottom: "100%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              marginBottom: 8,
+              background: "white",
+              border: "1px solid #ddd",
+              borderRadius: 8,
+              boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+              minWidth: 120,
+              overflow: "hidden"
+            }}>
+              <a
+                href="/terms"
+                style={{
+                  display: "block",
+                  padding: "10px 16px",
+                  textDecoration: "none",
+                  color: "#111827",
+                  fontSize: 14,
+                  borderBottom: "1px solid #f3f4f6",
+                  transition: "background 0.2s ease"
+                }}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.background = "#f9fafb"}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.background = "white"}
+              >
+                Terms
+              </a>
+              <a
+                href="/privacy"
+                style={{
+                  display: "block",
+                  padding: "10px 16px",
+                  textDecoration: "none",
+                  color: "#111827",
+                  fontSize: 14,
+                  transition: "background 0.2s ease"
+                }}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.background = "#f9fafb"}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.background = "white"}
+              >
+                Privacy
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );
