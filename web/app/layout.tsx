@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Karen — AI Therapy',
-  description: 'Empathetic AI chat companion for mental wellness support',
+  title: 'Karen',
+  description: 'I\'m here to listen. What\'s on your mind?',
 }
 
 export default function RootLayout({

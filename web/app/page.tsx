@@ -49,7 +49,7 @@ export default function HomePage() {
     }
   }
 
-  function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+  function onKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (e.key === "Enter") {
       e.preventDefault();
       void sendMessage();
