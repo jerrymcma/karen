@@ -102,19 +102,32 @@ export default function HomePage() {
           ))}
         </div>
         <div style={{ display: "flex", gap: 8 }}>
-          <input
+          <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={onKeyDown}
             placeholder="Share what's on your mind…"
             aria-label="Message"
             disabled={sending}
+            rows={1}
             style={{
               flex: 1,
               padding: "10px 12px",
               borderRadius: 10,
               border: "1px solid #ddd",
               outline: "none",
+              resize: "none",
+              fontFamily: "inherit",
+              fontSize: "inherit",
+              lineHeight: "1.5",
+              maxHeight: "72px", // Approximately 3 lines
+              minHeight: "40px",
+              overflowY: "auto",
+            }}
+            onInput={(e) => {
+              const target = e.target as HTMLTextAreaElement;
+              target.style.height = "40px";
+              target.style.height = Math.min(target.scrollHeight, 72) + "px";
             }}
           />
           <button
@@ -135,14 +148,20 @@ export default function HomePage() {
       </div>
       <div style={{ 
         display: "flex", 
-        gap: 16, 
         justifyContent: "center", 
-        marginTop: 16, 
-        fontSize: 12, 
-        color: "#6b7280" 
+        marginTop: 16
       }}>
-        <a href="/terms" style={{ textDecoration: "none", color: "#6b7280" }}>Terms</a>
-        <a href="/privacy" style={{ textDecoration: "none", color: "#6b7280" }}>Privacy</a>
+        <a href="/info" style={{ 
+          textDecoration: "none", 
+          color: "#d1d5db",
+          fontSize: 16,
+          opacity: 0.7,
+          transition: "opacity 0.2s ease"
+        }} 
+        onMouseEnter={(e) => e.target.style.opacity = "1"}
+        onMouseLeave={(e) => e.target.style.opacity = "0.7"}>
+          ⓘ
+        </a>
       </div>
     </main>
   );
