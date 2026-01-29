@@ -156,7 +156,6 @@ export default function HomePage() {
         <div style={{ position: "relative" }}>
           <button
             onClick={() => setShowDropdown(!showDropdown)}
-            onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
             style={{ 
               background: "none",
               border: "none",
@@ -174,19 +173,23 @@ export default function HomePage() {
             ⓘ
           </button>
           {showDropdown && (
-            <div style={{
-              position: "absolute",
-              bottom: "100%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              marginBottom: 8,
-              background: "white",
-              border: "1px solid #ddd",
-              borderRadius: 8,
-              boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-              minWidth: 120,
-              overflow: "hidden"
-            }}>
+            <div 
+              style={{
+                position: "absolute",
+                bottom: "100%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                marginBottom: 8,
+                background: "white",
+                border: "1px solid #ddd",
+                borderRadius: 8,
+                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                minWidth: 120,
+                overflow: "hidden",
+                zIndex: 1000
+              }}
+              onMouseDown={(e) => e.preventDefault()}
+            >
               <a
                 href="/terms"
                 style={{
